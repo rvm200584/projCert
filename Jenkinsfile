@@ -10,7 +10,8 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t php-webapp:latest -f /home/labuser/demo/project/Dockerfile /home/labuser/demo/project'
+                dir("${WORKSPACE}") {      
+                sh 'docker build -t my-webapp:latest .'
             }
         }
 
