@@ -14,6 +14,7 @@ pipeline {
                 sh 'docker build -t my-webapp:latest .'
             }
         }
+   }
 
         stage('Deploy Container') {
             steps {
