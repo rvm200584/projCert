@@ -11,7 +11,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 dir("${WORKSPACE}") {      
-                sh 'docker build -t my-webapp:latest .'
+                sh 'docker build -t php-webapp:latest .'
             }
         }
    }
